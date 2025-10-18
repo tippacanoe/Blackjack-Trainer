@@ -6,18 +6,13 @@ public class Hand : MonoBehaviour
 {
     private int handTotalValue;
     private List<Card> cards;
+    private bool bust;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        bust = false;
     } // Start
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } // Update
 
     private void updateHandTotalValue()
     {
@@ -44,14 +39,15 @@ public class Hand : MonoBehaviour
             }
         }
 
-        setHandTotalValue(total);
+        if (total > 21)
+        {
+            bust = true;
+        }
+
+        handTotalValue = total;
+        Debug.Log(total);
 
     } // updateHandTotalValue
-
-    private void setHandTotalValue(int value)
-    {
-        handTotalValue = value;
-    } // setHandTotalValue
 
     public int getHandTotalValue()
     {
@@ -65,11 +61,16 @@ public class Hand : MonoBehaviour
         updateHandTotalValue();
     } // addCard
 
-    /*
-    // list cards in hand
-    public List<Card> getCards()
+    // resets the state of the hand
+    public void resetHand()
     {
-        cards;
-    } // getCards
-    */
+        cards.Clear();
+        bust = false;
+    } // resetHand
+
+    // return bust state of hand
+    public bool isBust()
+    {
+        return bust;
+    } // isBust
 } // Hand

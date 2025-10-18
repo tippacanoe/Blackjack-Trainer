@@ -14,11 +14,13 @@ public class Deck : MonoBehaviour
         shuffle();
     } // Start
 
+    /*
     // Update is called once per frame
     void Update()
     {
         
     } // Update
+    */
 
     // grab random card data from deck, remove card from deck, and then return that card
     public Card draw()
@@ -31,11 +33,22 @@ public class Deck : MonoBehaviour
     // reset deck
     public void shuffle()
     {
-        cards.Clear();
+        if (cards != null)
+        {
+            cards.Clear();
+        }
+
         for (int i = 0; i < allCards.Length; i++)
         {
             cards.Add(allCards[i]);
         }
 
     } // shuffle
+
+    // check how many cards are left in the deck
+    public int cardsRemaining()
+    {
+        return cards.Count;
+    } // cardsRemaining
+
 } // Deck
