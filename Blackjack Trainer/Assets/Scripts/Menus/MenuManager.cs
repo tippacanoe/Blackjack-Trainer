@@ -31,6 +31,7 @@ public class MenuManager : MonoBehaviour
 
     private void showMainMenu()
     {
+        Debug.Log("Showing main menu");
         play.gameObject.SetActive(true);
         quit.gameObject.SetActive(true);
         tutorial.gameObject.SetActive(true);
@@ -43,6 +44,7 @@ public class MenuManager : MonoBehaviour
 
     private void showPlayMenu()
     {
+        Debug.Log("Showing play menu");
         play.gameObject.SetActive(false);
         quit.gameObject.SetActive(false);
         tutorial.gameObject.SetActive(false);
@@ -55,6 +57,7 @@ public class MenuManager : MonoBehaviour
 
     private void showTutorial()
     {
+        Debug.Log("Showing tutorial");
         play.gameObject.SetActive(false);
         quit.gameObject.SetActive(false);
         tutorial.gameObject.SetActive(false);
@@ -68,6 +71,7 @@ public class MenuManager : MonoBehaviour
     // set standard mode then load the game
     private void startStandardMode()
     {
+        Debug.Log("Starting game in standard mode");
         ModeTracker.setStandardMode();
         SceneManager.LoadScene("BlackjackScene");
     } // startStandardMode
@@ -75,6 +79,7 @@ public class MenuManager : MonoBehaviour
     // set strategy mode then load the game
     private void startStrategyMode()
     {
+        Debug.Log("Starting game in strategy mode");
         ModeTracker.setStrategyMode();
         SceneManager.LoadScene("BlackjackScene");
     } // startStrategyMode
@@ -82,6 +87,7 @@ public class MenuManager : MonoBehaviour
     // set card counting mode then load the game
     private void startCardCountingMode()
     {
+        Debug.Log("Starting game in card counting mode");
         ModeTracker.setCountingMode();
         SceneManager.LoadScene("BlackjackScene");
     } // startCardCountingMode
