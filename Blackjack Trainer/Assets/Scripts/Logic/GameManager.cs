@@ -6,9 +6,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button stand;
     [SerializeField] private Button playAgain;
     [SerializeField] private Button menu;
-    [SerializeField] private Deck deck;
+    [SerializeField] private Deck deckPrefab;
+    [SerializeField] private Hand handPrefab;
+    private Deck deck;
     private Hand playerHand;
     private Hand dealerHand;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +23,14 @@ public class GameManager : MonoBehaviour
 
         // hide the post-round buttons
         setPostRoundButtonStates(false);
+
+        // initialize data structures
+        deck = Instantiate(deckPrefab).GetComponent<Deck>();
+        deck.Initialize();
+        playerHand = Instantiate(handPrefab).GetComponent<Hand>();
+        playerHand.Initialize();
+        dealerHand = Instantiate(handPrefab).GetComponent<Hand>();
+        dealerHand.Initialize();
 
         // start game
         startRound();

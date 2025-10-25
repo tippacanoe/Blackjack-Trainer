@@ -9,10 +9,11 @@ public class Hand : MonoBehaviour
     private bool bust;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Initialize()
     {
+        cards = new List<Card>();
         bust = false;
-    } // Start
+    } // Initialize
 
     private void updateHandTotalValue()
     {
