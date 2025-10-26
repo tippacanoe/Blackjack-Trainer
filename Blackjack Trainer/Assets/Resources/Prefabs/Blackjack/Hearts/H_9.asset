@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suit: Hearts
   rank: 9
+  sprite: {fileID: -2214048079345318864, guid: 2e849df6f09a0db4aa110a5f77f63d56, type: 3}

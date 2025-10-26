@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suit: Diamond
   rank: 8
+  sprite: {fileID: 690300255040753134, guid: 200f59762db699d4b9c9c10b99cf0283, type: 3}

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suit: Clubs
   rank: 8
+  sprite: {fileID: -4681153592065497238, guid: f2c0965ca29df7c40a6b9c97c7aa5726, type: 3}

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suit: Spade
   rank: 10
+  sprite: {fileID: -2365059040612170661, guid: ca5d4a2ecf8c54742a1dd49c22f5e77a, type: 3}
