@@ -45,32 +45,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCards:
-  - {fileID: 11400000, guid: 52f46446e13a114469a335605eb5ff22, type: 2}
-  - {fileID: 11400000, guid: 8ffb80434cb7b61499937be00333d183, type: 2}
-  - {fileID: 11400000, guid: 81cd8bb55674a784a978c2a052dce211, type: 2}
-  - {fileID: 11400000, guid: b995260d50fb9f747bc6c6c0fc6f9d92, type: 2}
-  - {fileID: 11400000, guid: 3aee6356a3373804080b9ce898c2b61b, type: 2}
-  - {fileID: 11400000, guid: 89e5421f29f3a5148b7337a2a37e4ecf, type: 2}
-  - {fileID: 11400000, guid: 8e2eabdc050f14a4491aefde04f0c559, type: 2}
-  - {fileID: 11400000, guid: 8ed73b4f146301e41b32d22f98a9d040, type: 2}
-  - {fileID: 11400000, guid: cc4aba9f3c2452d48bbd31d160598dbc, type: 2}
-  - {fileID: 11400000, guid: 7a9444292d9a5394cbb38993b8a113ce, type: 2}
-  - {fileID: 11400000, guid: 11572106e96f0ed48beb4487930cc09e, type: 2}
-  - {fileID: 11400000, guid: 50518fd2a6f761445a236185d1e199e3, type: 2}
-  - {fileID: 11400000, guid: fec8881f176e152459b7585e1d9ed3d8, type: 2}
-  - {fileID: 11400000, guid: 40959a6518a31e14ba8c57eb0e3d959d, type: 2}
-  - {fileID: 11400000, guid: 90e704f13ea749d4192270c19e7475d0, type: 2}
-  - {fileID: 11400000, guid: 104194865f860184d95f693bde8d31ba, type: 2}
-  - {fileID: 11400000, guid: 56955f231a714f94a88875f1334cd182, type: 2}
-  - {fileID: 11400000, guid: 6a6c109e13420674ab0de24b03bf4ffd, type: 2}
-  - {fileID: 11400000, guid: 601c303b8c9c88f48a11f3d361ebe256, type: 2}
-  - {fileID: 11400000, guid: 74c598e6bbf52ce449107d7d9ddc18e6, type: 2}
-  - {fileID: 11400000, guid: 603dcacf62c67884d9b493d214983d65, type: 2}
-  - {fileID: 11400000, guid: 61fa9c348a5d6de42848e62a442ab9e0, type: 2}
-  - {fileID: 11400000, guid: f4f7760d3d5179944b2833114f8461fc, type: 2}
-  - {fileID: 11400000, guid: 6506f5eb106c1e142b987187b75f5710, type: 2}
-  - {fileID: 11400000, guid: 2d210a350ca42c845bb6c2925e1a606e, type: 2}
-  - {fileID: 11400000, guid: fc1af9ad3ad6f674883bf92d59a3becc, type: 2}
+  - {fileID: 11400000, guid: 01c6912c13600194c9efa81bfbf62a3b, type: 2}
+  - {fileID: 11400000, guid: a4a3d8cf19eaaba4faad252dead61e67, type: 2}
+  - {fileID: 11400000, guid: 8196754a1f61b6e438c82284ba8fefc4, type: 2}
+  - {fileID: 11400000, guid: 81265795c9e2b4c4a9004b8bc8a7758e, type: 2}
+  - {fileID: 11400000, guid: 9f30e37412f7b374ab7addc12b9803cc, type: 2}
+  - {fileID: 11400000, guid: 26627e7adc55689498722f2d715917e9, type: 2}
+  - {fileID: 11400000, guid: c86637942c113f94082a0e577b063213, type: 2}
+  - {fileID: 11400000, guid: 490d59d84d835b34d906b81547b94890, type: 2}
+  - {fileID: 11400000, guid: 678a70739c266c34cb471718af83fa60, type: 2}
+  - {fileID: 11400000, guid: f5ab03fc7369c6849a65da2a277df2a4, type: 2}
+  - {fileID: 11400000, guid: d887b7e43304d8840a6a336d2baf27ff, type: 2}
+  - {fileID: 11400000, guid: 958d538b2c18bd147b1dcc0dd977ed3d, type: 2}
+  - {fileID: 11400000, guid: cf551b774aee3c24aa904951899cee1b, type: 2}
+  - {fileID: 11400000, guid: c4c3a9e8e50893a499cf4ea6be32837f, type: 2}
+  - {fileID: 11400000, guid: 10d4943bb105f8c40924a5d6c69a042d, type: 2}
+  - {fileID: 11400000, guid: be7c4eeefb574ad43ac4842cde2e56fe, type: 2}
+  - {fileID: 11400000, guid: daa21af0be91eb54baf6c38f91b42574, type: 2}
+  - {fileID: 11400000, guid: 1c0ffb0c0a3260f468e32e6354231198, type: 2}
+  - {fileID: 11400000, guid: e378ad2a24c94104abe690a8520b54ce, type: 2}
+  - {fileID: 11400000, guid: 581b800b9a10e3a438200e6cf43b0f43, type: 2}
+  - {fileID: 11400000, guid: ae70ad0993a9aef45a9386c906e1cc62, type: 2}
+  - {fileID: 11400000, guid: 8c61aa736838d404eb794342ba43afae, type: 2}
+  - {fileID: 11400000, guid: 46d538fc354a36a40bbdb379786b7d97, type: 2}
+  - {fileID: 11400000, guid: 7d1d9670db3f103468bb0392e58f7f95, type: 2}
+  - {fileID: 11400000, guid: d3ca8ec6de1ef0746bf5dd221aed5f69, type: 2}
+  - {fileID: 11400000, guid: 4f88e2d8863d56a4c8ecccf546689987, type: 2}
   - {fileID: 11400000, guid: 784f984c732f2354b8a377bc99b54e84, type: 2}
   - {fileID: 11400000, guid: ff3761b9a2ec81b4894835495a73b17b, type: 2}
   - {fileID: 11400000, guid: a6aae60ac45156142a7081df4cb5e3c5, type: 2}
