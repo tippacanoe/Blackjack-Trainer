@@ -573,7 +573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -780, y: 400}
+  m_AnchoredPosition: {x: -780, y: -400}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &250867791
@@ -1257,8 +1257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 250.5}
+  m_SizeDelta: {x: 1920, y: 586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903612231
 MonoBehaviour:
@@ -1280,7 +1280,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <INSERT TUTORIAL TEXT>
+  m_text: "Blackjack is a card game in which players' try to score a hand as close
+    to 21 as possible. Hands are scored based on the sum of card ranks. \n\nNumber
+    cards are worth their number value. Face cards are worth 10. Aces count as 1
+    or 11, depending on what gets the hand closest to winning. \n\nPlayers with a
+    score over 21 have gone 'bust', and automatically lose the game. \n\nOn your
+    turn, you can 'hit' to draw another card, or 'stand' to finish your turn. \n\nDealers
+    draw until their hand is worth 17 or more. The dealer's first card is always
+    hidden from the player. \n\nThe person with a hand value closest to 21 and not
+    busting wins. If two hands are of equal value or both players bust, the round
+    is a tie. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
