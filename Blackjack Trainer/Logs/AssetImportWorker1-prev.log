@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Logan" at "2025-10-26T17:44:29.5704146Z"
 Built from '6000.2/staging' branch; Version is '6000.2.9f1 (e0c4e791ab71) revision 14730471'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Logan" at "2025-10-26T18:05:02.8675664Z"
 OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32535 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-10-26T17:44:29Z
+Date: 2025-10-26T18:05:02Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Unity.exe
@@ -17,7 +17,7 @@ C:/Dev/Blackjack-Trainer/Blackjack Trainer
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-65312
+49183
 -licensingIpc
 LicenseClient-Logan
 -job-worker-count
@@ -65,18 +65,18 @@ C:/Dev/Blackjack-Trainer/Blackjack Trainer
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7172]  Target information:
+Player connection [2228]  Target information:
 
-Player connection [7172]  * "[IP] 192.168.198.1 [Port] 0 [Flags] 2 [Guid] 2523267561 [EditorId] 2523267561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [2228]  * "[IP] 192.168.198.1 [Port] 0 [Flags] 2 [Guid] 1689856471 [EditorId] 1689856471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7172]  * "[IP] 192.168.40.1 [Port] 0 [Flags] 2 [Guid] 2523267561 [EditorId] 2523267561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [2228]  * "[IP] 192.168.40.1 [Port] 0 [Flags] 2 [Guid] 1689856471 [EditorId] 1689856471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7172]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2523267561 [EditorId] 2523267561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [2228]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1689856471 [EditorId] 1689856471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7172]  * "[IP] 10.0.0.109 [Port] 0 [Flags] 2 [Guid] 2523267561 [EditorId] 2523267561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [2228]  * "[IP] 10.0.0.109 [Port] 0 [Flags] 2 [Guid] 1689856471 [EditorId] 1689856471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-MAVDSUS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7172] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [7172] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2228] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2228] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,12 +85,12 @@ Input System module state changed to: Initialized.
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.3+a4e98f1
-  Session Id:              092b5099b13843d79ec01c8482f4e07d
+  Session Id:              af435c3cae994e9da929574f9fd0ffbc
   Correlation Id:          062511515e100cf306e57a573afe40f0
-  External correlation Id: 7157154190507576525
+  External correlation Id: 9095511922997173332
   Machine Id:              63YVbSzLl+ckpQZK101dSP6sl44=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Logan" (connect: 0.00s, validation: 0.00s, handshake: 0.02s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Logan-notifications" at "2025-10-26T17:44:29.5955508Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Logan-notifications" at "2025-10-26T18:05:02.8926804Z"
 [Licensing::Module] Licensing Background thread has ended after 0.03s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -99,7 +99,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 1.63 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.9f1 (e0c4e791ab71)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Resources/UnitySubsystems
@@ -115,19 +115,19 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56240
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001137 seconds.
-- Loaded All Assemblies, in  0.262 seconds
+Registered in 0.001244 seconds.
+- Loaded All Assemblies, in  0.279 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.254 seconds
-Domain Reload Profiling: 515ms
-	BeginReloadAssembly (87ms)
+- Finished resetting the current domain, in  0.261 seconds
+Domain Reload Profiling: 540ms
+	BeginReloadAssembly (92ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
@@ -135,24 +135,24 @@ Domain Reload Profiling: 515ms
 		CreateAndSetChildDomain (1ms)
 	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (109ms)
-		LoadAssemblies (85ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (90ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (106ms)
-			TypeCache.Refresh (105ms)
-				TypeCache.ScanAssembly (96ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (105ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (254ms)
+	FinalizeReload (262ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (224ms)
+		SetupLoadedEditorAssemblies (232ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (40ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (49ms)
-			ProcessInitializeOnLoadAttributes (95ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (99ms)
 			ProcessInitializeOnLoadMethodAttributes (37ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -168,8 +168,8 @@ Begin MonoManager ReloadAssembly
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  0.491 seconds
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.535 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -177,120 +177,157 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.525 seconds
-Domain Reload Profiling: 1014ms
-	BeginReloadAssembly (118ms)
+- Finished resetting the current domain, in  0.552 seconds
+Domain Reload Profiling: 1085ms
+	BeginReloadAssembly (126ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (20ms)
 	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (315ms)
-		LoadAssemblies (241ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (349ms)
+		LoadAssemblies (265ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (137ms)
-			TypeCache.Refresh (102ms)
-				TypeCache.ScanAssembly (94ms)
-			BuildScriptInfoCaches (29ms)
+		AnalyzeDomain (153ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (104ms)
+			BuildScriptInfoCaches (32ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (525ms)
+	FinalizeReload (552ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (455ms)
+		SetupLoadedEditorAssemblies (478ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (118ms)
-			ProcessInitializeOnLoadAttributes (300ms)
-			ProcessInitializeOnLoadMethodAttributes (29ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (130ms)
+			ProcessInitializeOnLoadAttributes (307ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4972 unused Assets / (1.6 MB). Loaded Objects now: 5467.
-Memory consumption went from 93.0 MB to 91.4 MB.
-Total: 4.410100 ms (FindLiveObjects: 0.303600 ms CreateObjectMapping: 0.246100 ms MarkObjects: 2.968800 ms  DeleteObjects: 0.890500 ms)
+Unloading 4971 unused Assets / (1.9 MB). Loaded Objects now: 5466.
+Memory consumption went from 93.0 MB to 91.1 MB.
+Total: 4.652900 ms (FindLiveObjects: 0.305800 ms CreateObjectMapping: 0.266000 ms MarkObjects: 3.046900 ms  DeleteObjects: 1.033300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3520.743004 seconds.
-  path: Assets/Scripts/Logic/Card.cs
-  artifactKey: Guid(586581e43f06e4444ae4646189876c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Logic/Card.cs using Guid(586581e43f06e4444ae4646189876c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5887ec5268dd12412f95cbeee18798b7') in 0.0040397 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 4754.182983 seconds.
+  path: Assets/Resources/Prefabs/Blackjack/Deck.prefab
+  artifactKey: Guid(db288ec07d461a642a9da3bd507d7e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Blackjack/Deck.prefab using Guid(db288ec07d461a642a9da3bd507d7e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f12105eda28f233ffef05259018c16dc') in 0.0301116 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 61
 
 ========================================================================
-Received Import Request.
-  Time since last request: 23.022313 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_3.png
-  artifactKey: Guid(32c58079f4013e7488757c9dc1b04f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_3.png using Guid(32c58079f4013e7488757c9dc1b04f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd6dc2fbdae7341cbd868f49c9faffbc3') in 0.0672702 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.477 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.568 seconds
+Domain Reload Profiling: 1045ms
+	BeginReloadAssembly (151ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (276ms)
+		LoadAssemblies (236ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (104ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (92ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (568ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (481ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 1.11 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4969 unused Assets / (1.7 MB). Loaded Objects now: 5473.
+Memory consumption went from 93.9 MB to 92.2 MB.
+Total: 5.183100 ms (FindLiveObjects: 0.417000 ms CreateObjectMapping: 0.430700 ms MarkObjects: 3.284000 ms  DeleteObjects: 1.050400 ms)
 
+Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_jack.png
-  artifactKey: Guid(acb81f1c70da0c6449dbf71674c8883a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_jack.png using Guid(acb81f1c70da0c6449dbf71674c8883a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1f762698b2e700705ea28cea70900231') in 0.0066145 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.507 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.593 seconds
+Domain Reload Profiling: 1100ms
+	BeginReloadAssembly (154ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (301ms)
+		LoadAssemblies (256ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (113ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (100ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (594ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (495ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (138ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 0.90 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4969 unused Assets / (1.8 MB). Loaded Objects now: 5476.
+Memory consumption went from 93.9 MB to 92.1 MB.
+Total: 4.750100 ms (FindLiveObjects: 0.302800 ms CreateObjectMapping: 0.253900 ms MarkObjects: 3.135100 ms  DeleteObjects: 1.057300 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_6.png
-  artifactKey: Guid(9d9f7873eac536547b3f151a32766759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_6.png using Guid(9d9f7873eac536547b3f151a32766759) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1048997b260a7ac78c28dcdd0bc0c42f') in 0.0125703 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_5.png
-  artifactKey: Guid(89c8a7226ace13848b781d91506d5e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_5.png using Guid(89c8a7226ace13848b781d91506d5e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ac37037363426f5ef77aef5ccd0b65a7') in 0.0101281 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_king.png
-  artifactKey: Guid(9c1b977938e4247419d1a4232ef591f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_king.png using Guid(9c1b977938e4247419d1a4232ef591f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85ac985a7f8f1adfe95059773b2bd1b4') in 0.0071176 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_10.png
-  artifactKey: Guid(a557a75fc35402349ab3698ed17d0f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_10.png using Guid(a557a75fc35402349ab3698ed17d0f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9bb604c3aa0e6dfab11da506b86ac83d') in 0.0079066 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_queen.png
-  artifactKey: Guid(e2f996693401565449c753101c6f7f32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_queen.png using Guid(e2f996693401565449c753101c6f7f32) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a211e8579e84336bcc34330bf7f8278f') in 0.0128832 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Resources/Prefabs/Blackjack/Clubs/clubs_4.png
-  artifactKey: Guid(51df1148fc67ba046984073b9aabcfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Blackjack/Clubs/clubs_4.png using Guid(51df1148fc67ba046984073b9aabcfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0aafbbba9c029917c2629dc33fddb877') in 0.0086115 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Prepare: number of updated asset objects reloaded= 0
