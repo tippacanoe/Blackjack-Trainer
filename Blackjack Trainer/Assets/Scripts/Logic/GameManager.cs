@@ -58,6 +58,9 @@ public class GameManager : MonoBehaviour
     // add card to dealer hand
     private void dealerHit()
     {
+
+        //dealerHand.revealHiddenCard();
+
         Debug.Log("Dealer has: ");
         dealerHand.addCard(deck.draw());
         if (dealerHand.isBust())
@@ -122,12 +125,10 @@ public class GameManager : MonoBehaviour
         }
     } // startRound
 
-    // ends the current round of the game
+    // ends the current round of the game and asks if the player wants to play again
     private void endRound()
     {
         compareHands();
-
-        // ask if player wants to play again
         setPostRoundButtonStates(true);
     } // endRound
 

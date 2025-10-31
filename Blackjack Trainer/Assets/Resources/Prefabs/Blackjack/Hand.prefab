@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6745556951601428020}
   - component: {fileID: 3724179998483245320}
+  - component: {fileID: -6351215313522115516}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -44,3 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71967ad454980e41a6c17089a3caba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6351215313522115516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440826530718910208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c42849e13ad8fc4887ac0d957199aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandDisplay
+  cardContainer: {fileID: 0}
+  cardPrefab: {fileID: 3299608296226154086, guid: 839c61c7cfad41842b71fae4151578ef, type: 3}
+  cardBackSprite: {fileID: 7560894977010240419, guid: 792eb836d0ae68f49bb27c469b4528b9, type: 3}
+  cardSpacing: 120
