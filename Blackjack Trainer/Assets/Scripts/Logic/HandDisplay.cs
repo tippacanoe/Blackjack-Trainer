@@ -11,12 +11,10 @@ public class HandDisplay : MonoBehaviour
     private float cardSpacing = 3f;
     private List<GameObject> cardObjects = new List<GameObject>();
     private bool isDealer;
-    private bool roundEnded;
 
     public void Initialize(bool isDealer)
     {
         this.isDealer = isDealer;
-        this.roundEnded = false;
     } // Initialize
 
     // Add a card visual to the display
@@ -26,7 +24,7 @@ public class HandDisplay : MonoBehaviour
         Image cardImage = cardObj.GetComponent<Image>();
 
         // For dealer's first card, show back of card
-        if (isDealer && cardObjects.Count == 0 && !roundEnded)
+        if (isDealer && cardObjects.Count == 0)
         {
             cardImage.sprite = cardBackSprite;
         }
@@ -46,7 +44,6 @@ public class HandDisplay : MonoBehaviour
         {
             Image cardImage = cardObjects[0].GetComponent<Image>();
             cardImage.sprite = card.getSprite();
-            roundEnded = true;
         }
     } // revealDealerCard
 
@@ -71,7 +68,6 @@ public class HandDisplay : MonoBehaviour
             Destroy(cardObj);
         }
         cardObjects.Clear();
-        roundEnded = false;
     } // clearCards
 
 } // HandDisplay

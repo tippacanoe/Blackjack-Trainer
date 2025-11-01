@@ -17,6 +17,7 @@ public class Hand : MonoBehaviour
         this.isDealer = isDealer;
         cards = new List<Card>();
         bust = false;
+        handDisplay.Initialize(isDealer);
     } // Initialize
 
     private void updateHandTotalValue()
@@ -47,6 +48,7 @@ public class Hand : MonoBehaviour
             {
                 total += 10;
             }
+            counter++;
         }
 
         if (total > 21)
