@@ -8,8 +8,7 @@ public class HandDisplay : MonoBehaviour
     [SerializeField] private Transform cardContainer;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private Sprite cardBackSprite;
-    [SerializeField] private float cardSpacing = 120f;
-
+    private float cardSpacing = 3f;
     private List<GameObject> cardObjects = new List<GameObject>();
     private bool isDealer;
     private bool roundEnded;
@@ -43,7 +42,7 @@ public class HandDisplay : MonoBehaviour
     // Reveal the dealer's first card
     public void revealDealerCard(Card card)
     {
-        if (isDealer && cardObjects.Count > 0)
+        if (isDealer)
         {
             Image cardImage = cardObjects[0].GetComponent<Image>();
             cardImage.sprite = card.getSprite();

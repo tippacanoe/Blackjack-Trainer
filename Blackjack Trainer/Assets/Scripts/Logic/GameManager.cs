@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Button hit;
@@ -8,11 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button playAgain;
     [SerializeField] private Button menu;
     [SerializeField] private Deck deckPrefab;
-    [SerializeField] private Hand handPrefab;
+    [SerializeField] private Hand playerHand;
+    [SerializeField] private Hand dealerHand;
     private Deck deck;
-    private Hand playerHand;
-    private Hand dealerHand;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,10 +27,8 @@ public class GameManager : MonoBehaviour
         // initialize data structures
         deck = Instantiate(deckPrefab).GetComponent<Deck>();
         deck.Initialize();
-        playerHand = Instantiate(handPrefab).GetComponent<Hand>();
-        playerHand.Initialize();
-        dealerHand = Instantiate(handPrefab).GetComponent<Hand>();
-        dealerHand.Initialize();
+        playerHand.Initialize(false); // false = not dealer
+        dealerHand.Initialize(true);  // true = is dealer
 
         // start game
         startRound();
@@ -42,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Player has: ");
         playerHand.addCard(deck.draw());
-        if(playerHand.isBust())
+        if (playerHand.isBust())
         {
             // end player's turn
             playDealer();
@@ -58,9 +55,6 @@ public class GameManager : MonoBehaviour
     // add card to dealer hand
     private void dealerHit()
     {
-
-        //dealerHand.revealHiddenCard();
-
         Debug.Log("Dealer has: ");
         dealerHand.addCard(deck.draw());
         if (dealerHand.isBust())
@@ -72,8 +66,11 @@ public class GameManager : MonoBehaviour
     // runs the logic for casino style dealer
     private void playDealer()
     {
+        // Reveal dealer's hidden card before playing
+        dealerHand.revealHiddenCard();
+
         // draw to 17
-        while(dealerHand.getHandTotalValue() < 17)
+        while (dealerHand.getHandTotalValue() < 17)
         {
             dealerHit();
         }
@@ -89,11 +86,13 @@ public class GameManager : MonoBehaviour
         {
             // draw
             Debug.Log("Hand is a draw");
-        } else if (dealerHand.isBust() || (!playerHand.isBust() && playerHand.getHandTotalValue() > dealerHand.getHandTotalValue()))
+        }
+        else if (dealerHand.isBust() || (!playerHand.isBust() && playerHand.getHandTotalValue() > dealerHand.getHandTotalValue()))
         {
             // player wins
             Debug.Log("Player wins");
-        } else
+        }
+        else
         {
             // dealer wins
             Debug.Log("Dealer wins");
@@ -103,12 +102,11 @@ public class GameManager : MonoBehaviour
     // starts a new round of the game
     private void startRound()
     {
-
         // hide post-round buttons
         setPostRoundButtonStates(false);
 
         // verify there are enough cards to play another hand
-        if(deck.cardsRemaining() < 10)
+        if (deck.cardsRemaining() < 10)
         {
             deck.shuffle();
         }
@@ -128,6 +126,9 @@ public class GameManager : MonoBehaviour
     // ends the current round of the game and asks if the player wants to play again
     private void endRound()
     {
+        // Make sure dealer's card is revealed
+        dealerHand.revealHiddenCard();
+
         compareHands();
         setPostRoundButtonStates(true);
     } // endRound
@@ -137,6 +138,8 @@ public class GameManager : MonoBehaviour
     {
         playAgain.gameObject.SetActive(state);
         menu.gameObject.SetActive(state);
+        hit.gameObject.SetActive(!state);
+        stand.gameObject.SetActive(!state);
     } // setButtonStates
 
     // changes game scene to main menu

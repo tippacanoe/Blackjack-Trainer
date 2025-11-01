@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Cards
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Input
     uniqueID: 2682472417
+    locked: 0
+  - name: Cards
+    uniqueID: 3896466561
     locked: 0
   m_RenderingLayers:
   - Default
