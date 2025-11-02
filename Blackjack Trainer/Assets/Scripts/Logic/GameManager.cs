@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Hand playerHand;
     [SerializeField] private Hand dealerHand;
     [SerializeField] private TextMeshProUGUI tooltipText;
+    [SerializeField] private TextMeshProUGUI winnerText;
+    [SerializeField] private TextMeshProUGUI handTotalText;
     private Deck deck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Player has: ");
         playerHand.addCard(deck.draw());
+        handTotalText.text = "Hand Total: " + playerHand.getHandTotalValue();
 
         if (!roundStarting && ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
         {
@@ -95,20 +98,25 @@ public class GameManager : MonoBehaviour
     // determine hand winner
     private void compareHands()
     {
+        winnerText.gameObject.SetActive(true);
+
         if ((playerHand.isBust() && dealerHand.isBust()) || playerHand.getHandTotalValue() == dealerHand.getHandTotalValue())
         {
             // draw
             Debug.Log("Hand is a draw");
+            winnerText.text = "Hand is a draw";
         }
         else if (dealerHand.isBust() || (!playerHand.isBust() && playerHand.getHandTotalValue() > dealerHand.getHandTotalValue()))
         {
             // player wins
             Debug.Log("Player wins");
+            winnerText.text = "Player wins";
         }
         else
         {
             // dealer wins
             Debug.Log("Dealer wins");
+            winnerText.text = "Dealer wins";
         }
     } // compareHands
 
@@ -117,6 +125,9 @@ public class GameManager : MonoBehaviour
     {
         // hide post-round buttons
         setPostRoundButtonStates(false);
+
+        // hide winner text
+        winnerText.gameObject.SetActive(false);
 
         // show strategy tooltip
         tooltipText.gameObject.SetActive(true);
