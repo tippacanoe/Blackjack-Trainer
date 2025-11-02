@@ -1,6 +1,7 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Deck deckPrefab;
     [SerializeField] private Hand playerHand;
     [SerializeField] private Hand dealerHand;
+    [SerializeField] private TextMeshProUGUI tooltipText;
     private Deck deck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hit.onClick.AddListener(() => playerHit());
+        hit.onClick.AddListener(() => playerHit(false));
         stand.onClick.AddListener(() => playerStand());
         playAgain.onClick.AddListener(() => startRound());
         menu.onClick.AddListener(() => returnToMenu());
@@ -35,11 +37,18 @@ public class GameManager : MonoBehaviour
     } // Start
 
     // add card to player hand
-    private void playerHit()
+    private void playerHit(bool roundStarting)
     {
         Debug.Log("Player has: ");
         playerHand.addCard(deck.draw());
-        if (playerHand.isBust())
+
+        if (!roundStarting && ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
+        {
+            updateStrategyTooltip();
+        }
+
+        // if player is bust or has 21, move on to dealer's turn
+        if (playerHand.isBust() || playerHand.getHandTotalValue() == 21)
         {
             // end player's turn
             playDealer();
@@ -66,6 +75,10 @@ public class GameManager : MonoBehaviour
     // runs the logic for casino style dealer
     private void playDealer()
     {
+
+        // hide strategy tooltip since player turn is over
+        tooltipText.gameObject.SetActive(false);
+
         // Reveal dealer's hidden card before playing
         dealerHand.revealHiddenCard();
 
@@ -105,6 +118,9 @@ public class GameManager : MonoBehaviour
         // hide post-round buttons
         setPostRoundButtonStates(false);
 
+        // show strategy tooltip
+        tooltipText.gameObject.SetActive(true);
+
         // verify there are enough cards to play another hand
         if (deck.cardsRemaining() < 10)
         {
@@ -118,9 +134,14 @@ public class GameManager : MonoBehaviour
         // deal starting hands
         for (int i = 0; i < 2; i++)
         {
-            playerHit();
+            playerHit(true);
             dealerHit();
         }
+        if(ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
+        {
+            updateStrategyTooltip();
+        }
+
     } // startRound
 
     // ends the current round of the game and asks if the player wants to play again
@@ -148,5 +169,101 @@ public class GameManager : MonoBehaviour
         Debug.Log("Returning to Menu");
         SceneManager.LoadScene("MainMenuScene");
     } // returnToMenu
+
+    // evaluates whether the player is advised to hit or stand based on the dealer's upcard and their total
+    private void updateStrategyTooltip()
+    {
+        string suggestion = "";
+        string dealerCardValue = "";
+        string scoreType = "";
+        string playerHandValue = "";
+
+        // soft totals
+        if(playerHand.getHasSoftAce())
+        {
+            scoreType = "soft";
+
+            // dealer has high card
+            if(dealerHand.getShownDealerCard().getRank() >= 9)
+            {
+                dealerCardValue = "high";
+                if(playerHand.getHandTotalValue() >= 19)
+                {
+                    playerHandValue = "high";
+                    suggestion = "stand";
+                } else
+                {
+                    playerHandValue = "low";
+                    suggestion = "hit";
+                }
+            } else
+            {
+                dealerCardValue = "low";
+                if(playerHand.getHandTotalValue() >= 18)
+                {
+                    playerHandValue = "high";
+                    suggestion = "stand";
+                } else
+                {
+                    playerHandValue = "low";
+                    suggestion = "hit";
+                }
+            }
+        } 
+        // hard totals
+        else
+        {
+            scoreType = "hard";
+
+            // dealer has high card
+            if(dealerHand.getShownDealerCard().getRank() >= 7)
+            {
+                dealerCardValue = "high";
+                if(playerHand.getHandTotalValue() >= 17)
+                {
+                    playerHandValue = "high";
+                    suggestion = "stand";
+                }
+                else
+                {
+                    playerHandValue = "low";
+                    suggestion = "hit";
+                }
+            } 
+            // dealer has middle card
+            else if(dealerHand.getShownDealerCard().getRank() >= 4 && dealerHand.getShownDealerCard().getRank() <= 6)
+            {
+                dealerCardValue = "medium";
+                if(playerHand.getHandTotalValue() >= 12)
+                {
+                    playerHandValue = "high";
+                    suggestion = "stand";
+                } else
+                {
+                    playerHandValue = "low";
+                    suggestion = "hit";
+                }
+            }
+            // dealer has low card
+            else
+            {
+                dealerCardValue = "low";
+                if(playerHand.getHandTotalValue() >= 13)
+                {
+                    playerHandValue = "high";
+                    suggestion = "stand";
+                } else
+                {
+                    playerHandValue = "low";
+                    suggestion = "hit";
+                }
+            }
+
+        }
+
+        // place suggestion into on screen tooltip
+        tooltipText.text = "Player Score Type: " + scoreType + "\nDealer known value: " + dealerCardValue + "\nPlayer Hand Value: " + playerHandValue + "\nSuggestion: " + suggestion;
+
+    } // updateStrategyTooltip
 
 } // GameManager
