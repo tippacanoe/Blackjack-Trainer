@@ -10,6 +10,7 @@ public class Hand : MonoBehaviour
     private List<Card> cards;
     private bool bust;
     private bool isDealer;
+    private bool hasSoftAce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Initialize(bool isDealer = false)
@@ -33,6 +34,7 @@ public class Hand : MonoBehaviour
             {
                 aceCounter++;
                 total += 1;
+                hasSoftAce = false;
             }
             else
             {
@@ -44,9 +46,10 @@ public class Hand : MonoBehaviour
         while (counter < aceCounter)
         {
             // add max ace value to hand if it does not bust the hand
-            if (total + 10 < 21)
+            if (total + 10 <= 21)
             {
                 total += 10;
+                hasSoftAce = true;
             }
             counter++;
         }
@@ -60,10 +63,22 @@ public class Hand : MonoBehaviour
         Debug.Log(total);
     } // updateHandTotalValue
 
+    // returns the total value of the hand
     public int getHandTotalValue()
     {
         return handTotalValue;
     } // getHandtotalValue
+
+    // returns the face up card that the dealer is using
+    public Card getShownDealerCard()
+    {
+        return cards[1];
+    } // getShownDealerCard
+
+    public bool getHasSoftAce()
+    {
+        return hasSoftAce;
+    } // hasAce
 
     // add card to hand, and update hand total
     public void addCard(Card newCard)
@@ -83,6 +98,7 @@ public class Hand : MonoBehaviour
     {
         cards.Clear();
         bust = false;
+        hasSoftAce = false;
 
         // Clear the visual display
         if (handDisplay != null)
@@ -105,4 +121,5 @@ public class Hand : MonoBehaviour
             handDisplay.revealDealerCard(cards[0]);
         }
     } // revealHiddenCard
+
 } // Hand
