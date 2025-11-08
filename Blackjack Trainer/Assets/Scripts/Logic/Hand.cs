@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Hand : MonoBehaviour
 {
     [SerializeField] private HandDisplay handDisplay;
-
+    [SerializeField] private GameManager manager;
     private int handTotalValue;
     private List<Card> cards;
     private bool bust;
@@ -85,6 +85,11 @@ public class Hand : MonoBehaviour
     {
         cards.Add(newCard);
         updateHandTotalValue();
+        
+        if(!isDealer || cards.Count > 0)
+        {
+            checkCardCount(newCard);
+        }
 
         // Add card visual to display
         if (handDisplay != null)
@@ -119,7 +124,19 @@ public class Hand : MonoBehaviour
         if (isDealer && handDisplay != null && cards.Count > 0)
         {
             handDisplay.revealDealerCard(cards[0]);
+            checkCardCount(cards[0]);
         }
     } // revealHiddenCard
+
+    private void checkCardCount(Card card)
+    {
+        if(card.getRank() < 7)
+        {
+            manager.increaseCount();
+        } else if (card.getRank() > 9)
+        {
+            manager.decreaseCount();
+        }
+    } // checkCardCount
 
 } // Hand

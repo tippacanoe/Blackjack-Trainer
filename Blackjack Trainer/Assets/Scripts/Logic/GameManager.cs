@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winnerText;
     [SerializeField] private TextMeshProUGUI handTotalText;
     private Deck deck;
+    private int cardCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
         deck.Initialize();
         playerHand.Initialize(false); // false = not dealer
         dealerHand.Initialize(true);  // true = is dealer
+
+        // set card count to 0
+        cardCount = 0;
 
         // start game
         startRound();
@@ -103,19 +107,16 @@ public class GameManager : MonoBehaviour
         if ((playerHand.isBust() && dealerHand.isBust()) || playerHand.getHandTotalValue() == dealerHand.getHandTotalValue())
         {
             // draw
-            Debug.Log("Hand is a draw");
             winnerText.text = "Hand is a draw";
         }
         else if (dealerHand.isBust() || (!playerHand.isBust() && playerHand.getHandTotalValue() > dealerHand.getHandTotalValue()))
         {
             // player wins
-            Debug.Log("Player wins");
             winnerText.text = "Player wins";
         }
         else
         {
             // dealer wins
-            Debug.Log("Dealer wins");
             winnerText.text = "Dealer wins";
         }
     } // compareHands
@@ -136,6 +137,7 @@ public class GameManager : MonoBehaviour
         if (deck.cardsRemaining() < 10)
         {
             deck.shuffle();
+            cardCount = 0;
         }
 
         // reset state of both hands
@@ -148,10 +150,8 @@ public class GameManager : MonoBehaviour
             playerHit(true);
             dealerHit();
         }
-        if(ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
-        {
-            updateStrategyTooltip();
-        }
+        
+        updateStrategyTooltip();
 
     } // startRound
 
@@ -184,97 +184,118 @@ public class GameManager : MonoBehaviour
     // evaluates whether the player is advised to hit or stand based on the dealer's upcard and their total
     private void updateStrategyTooltip()
     {
-        string suggestion = "";
-        string dealerCardValue = "";
-        string scoreType = "";
-        string playerHandValue = "";
-
-        // soft totals
-        if(playerHand.getHasSoftAce())
+        if (ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
         {
-            scoreType = "soft";
+            string suggestion = "";
+            string dealerCardValue = "";
+            string scoreType = "";
+            string playerHandValue = "";
 
-            // dealer has high card
-            if(dealerHand.getShownDealerCard().getRank() >= 9)
+            // soft totals
+            if (playerHand.getHasSoftAce())
             {
-                dealerCardValue = "high";
-                if(playerHand.getHandTotalValue() >= 19)
-                {
-                    playerHandValue = "high";
-                    suggestion = "stand";
-                } else
-                {
-                    playerHandValue = "low";
-                    suggestion = "hit";
-                }
-            } else
-            {
-                dealerCardValue = "low";
-                if(playerHand.getHandTotalValue() >= 18)
-                {
-                    playerHandValue = "high";
-                    suggestion = "stand";
-                } else
-                {
-                    playerHandValue = "low";
-                    suggestion = "hit";
-                }
-            }
-        } 
-        // hard totals
-        else
-        {
-            scoreType = "hard";
+                scoreType = "soft";
 
-            // dealer has high card
-            if(dealerHand.getShownDealerCard().getRank() >= 7)
-            {
-                dealerCardValue = "high";
-                if(playerHand.getHandTotalValue() >= 17)
+                // dealer has high card
+                if (dealerHand.getShownDealerCard().getRank() >= 9)
                 {
-                    playerHandValue = "high";
-                    suggestion = "stand";
+                    dealerCardValue = "high";
+                    if (playerHand.getHandTotalValue() >= 19)
+                    {
+                        playerHandValue = "high";
+                        suggestion = "stand";
+                    }
+                    else
+                    {
+                        playerHandValue = "low";
+                        suggestion = "hit";
+                    }
                 }
                 else
                 {
-                    playerHandValue = "low";
-                    suggestion = "hit";
-                }
-            } 
-            // dealer has middle card
-            else if(dealerHand.getShownDealerCard().getRank() >= 4 && dealerHand.getShownDealerCard().getRank() <= 6)
-            {
-                dealerCardValue = "medium";
-                if(playerHand.getHandTotalValue() >= 12)
-                {
-                    playerHandValue = "high";
-                    suggestion = "stand";
-                } else
-                {
-                    playerHandValue = "low";
-                    suggestion = "hit";
+                    dealerCardValue = "low";
+                    if (playerHand.getHandTotalValue() >= 18)
+                    {
+                        playerHandValue = "high";
+                        suggestion = "stand";
+                    }
+                    else
+                    {
+                        playerHandValue = "low";
+                        suggestion = "hit";
+                    }
                 }
             }
-            // dealer has low card
+            // hard totals
             else
             {
-                dealerCardValue = "low";
-                if(playerHand.getHandTotalValue() >= 13)
+                scoreType = "hard";
+
+                // dealer has high card
+                if (dealerHand.getShownDealerCard().getRank() >= 7)
                 {
-                    playerHandValue = "high";
-                    suggestion = "stand";
-                } else
-                {
-                    playerHandValue = "low";
-                    suggestion = "hit";
+                    dealerCardValue = "high";
+                    if (playerHand.getHandTotalValue() >= 17)
+                    {
+                        playerHandValue = "high";
+                        suggestion = "stand";
+                    }
+                    else
+                    {
+                        playerHandValue = "low";
+                        suggestion = "hit";
+                    }
                 }
+                // dealer has middle card
+                else if (dealerHand.getShownDealerCard().getRank() >= 4 && dealerHand.getShownDealerCard().getRank() <= 6)
+                {
+                    dealerCardValue = "medium";
+                    if (playerHand.getHandTotalValue() >= 12)
+                    {
+                        playerHandValue = "high";
+                        suggestion = "stand";
+                    }
+                    else
+                    {
+                        playerHandValue = "low";
+                        suggestion = "hit";
+                    }
+                }
+                // dealer has low card
+                else
+                {
+                    dealerCardValue = "low";
+                    if (playerHand.getHandTotalValue() >= 13)
+                    {
+                        playerHandValue = "high";
+                        suggestion = "stand";
+                    }
+                    else
+                    {
+                        playerHandValue = "low";
+                        suggestion = "hit";
+                    }
+                }
+
             }
 
+            // place suggestion into on screen tooltip
+            tooltipText.text = "Player Score Type: " + scoreType + "\nDealer known value: " + dealerCardValue + "\nPlayer Hand Value: " + playerHandValue + "\nSuggestion: " + suggestion;
+
+        } else if (ModeTracker.getCurrentMode() == ModeTracker.mode.counting)
+        {
+            tooltipText.text = "Count: " + cardCount;
         }
-
-        // place suggestion into on screen tooltip
-        tooltipText.text = "Player Score Type: " + scoreType + "\nDealer known value: " + dealerCardValue + "\nPlayer Hand Value: " + playerHandValue + "\nSuggestion: " + suggestion;
-
     } // updateStrategyTooltip
+
+    public void increaseCount()
+    {
+        cardCount++;
+    } // increaseCount
+
+    public void decreaseCount()
+    {
+        cardCount--;
+    } // decreaseCount
 
 } // GameManager

@@ -1112,6 +1112,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1178441286}
     - target: {fileID: 3724179998483245320, guid: 78f7f9f0b4d6cac449271d2ecca77582, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 254555990}
+    - target: {fileID: 3724179998483245320, guid: 78f7f9f0b4d6cac449271d2ecca77582, type: 3}
       propertyPath: handDisplay
       value: 
       objectReference: {fileID: 2132990567}
@@ -1725,6 +1729,10 @@ PrefabInstance:
       propertyPath: cardContainer
       value: 
       objectReference: {fileID: 932248269}
+    - target: {fileID: 3724179998483245320, guid: 78f7f9f0b4d6cac449271d2ecca77582, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 254555990}
     - target: {fileID: 3724179998483245320, guid: 78f7f9f0b4d6cac449271d2ecca77582, type: 3}
       propertyPath: handDisplay
       value: 
