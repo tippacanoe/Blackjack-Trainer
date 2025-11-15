@@ -84,7 +84,8 @@ public class GameManager : MonoBehaviour
     {
 
         // hide strategy tooltip since player turn is over
-        tooltipText.gameObject.SetActive(false);
+        if (ModeTracker.getCurrentMode() == ModeTracker.mode.strategy) { tooltipText.gameObject.SetActive(false); }
+        
 
         // Reveal dealer's hidden card before playing
         dealerHand.revealHiddenCard();
