@@ -60,7 +60,6 @@ public class Hand : MonoBehaviour
         }
 
         handTotalValue = total;
-        Debug.Log(total);
     } // updateHandTotalValue
 
     // returns the total value of the hand
@@ -86,7 +85,7 @@ public class Hand : MonoBehaviour
         cards.Add(newCard);
         updateHandTotalValue();
         
-        if(!isDealer || cards.Count > 0)
+        if(!isDealer || cards.Count > 1)
         {
             checkCardCount(newCard);
         }
@@ -130,6 +129,7 @@ public class Hand : MonoBehaviour
 
     private void checkCardCount(Card card)
     {
+        Debug.Log("Editing count for card: " + card);
         if(card.getRank() < 7)
         {
             manager.increaseCount();

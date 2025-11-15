@@ -45,12 +45,13 @@ public class GameManager : MonoBehaviour
     // add card to player hand
     private void playerHit(bool roundStarting)
     {
-        Debug.Log("Player has: ");
         playerHand.addCard(deck.draw());
         handTotalText.text = "Hand Total: " + playerHand.getHandTotalValue();
 
         if (!roundStarting && ModeTracker.getCurrentMode() == ModeTracker.mode.strategy)
         {
+            updateStrategyTooltip();
+        } else if (ModeTracker.getCurrentMode() == ModeTracker.mode.counting) {
             updateStrategyTooltip();
         }
 
@@ -71,7 +72,6 @@ public class GameManager : MonoBehaviour
     // add card to dealer hand
     private void dealerHit()
     {
-        Debug.Log("Dealer has: ");
         dealerHand.addCard(deck.draw());
         if (dealerHand.isBust())
         {
@@ -160,8 +160,8 @@ public class GameManager : MonoBehaviour
     private void endRound()
     {
         // Make sure dealer's card is revealed
-        dealerHand.revealHiddenCard();
-
+        //dealerHand.revealHiddenCard();
+        updateStrategyTooltip();
         compareHands();
         setPostRoundButtonStates(true);
     } // endRound
@@ -178,7 +178,6 @@ public class GameManager : MonoBehaviour
     // changes game scene to main menu
     private void returnToMenu()
     {
-        Debug.Log("Returning to Menu");
         SceneManager.LoadScene("MainMenuScene");
     } // returnToMenu
 
